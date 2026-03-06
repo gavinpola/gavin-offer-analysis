@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gavin Pola - Career Decision Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Career Decision Analysis</h1>
+            <p class="subtitle">Gavin Pola | March 2025</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Executive Summary -->
+        <section id="summary" class="card">
+            <h2>Executive Summary</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <span class="label">Current Role</span>
+                    <span class="value">BCG Consultant, SF</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Offer</span>
+                    <span class="value">Mill - AI & GTM Lead</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Company Stage</span>
+                    <span class="value">Series C, ~$370M Valuation</span>
+                </div>
+                <div class="summary-item">
+                    <span class="label">Reporting To</span>
+                    <span class="value">Co-Founder (Matt Rogers)</span>
+                </div>
+            </div>
+            <div class="key-point">
+                <strong>The Decision:</strong> Leave a top-tier consulting track for a leadership role at a venture-backed startup with meaningful equity upside.
+            </div>
+        </section>
+
+        <!-- The Offer -->
+        <section id="offer" class="card">
+            <h2>The Mill Offer</h2>
+            <p class="section-intro">Mill offered three compensation packages to choose from. Each trades off between immediate cash and equity ownership.</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Option</th>
+                            <th>Base Salary</th>
+                            <th>Stock Options</th>
+                            <th>Ownership %</th>
+                            <th>Current Paper Value*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>More Equity</td>
+                            <td>$145,000</td>
+                            <td>174,299</td>
+                            <td>0.044%</td>
+                            <td>$112,726</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td><strong>Middle (Recommended)</strong></td>
+                            <td><strong>$157,500</strong></td>
+                            <td><strong>133,818</strong></td>
+                            <td><strong>0.033%</strong></td>
+                            <td><strong>$86,533</strong></td>
+                        </tr>
+                        <tr>
+                            <td>More Salary</td>
+                            <td>$170,000</td>
+                            <td>93,337</td>
+                            <td>0.023%</td>
+                            <td>$60,372</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-note">*Paper value = shares × (Series C price $0.9264 - strike price $0.28)</p>
+
+            <div class="company-details">
+                <h3>About Mill</h3>
+                <ul>
+                    <li><strong>What they do:</strong> Smart kitchen food recycler that turns food scraps into chicken feed</li>
+                    <li><strong>Founded by:</strong> Matt Rogers & Harry Tannenbaum (co-founders of Nest, sold to Google for $3.2B)</li>
+                    <li><strong>Investors:</strong> Amazon, Google Ventures, Breakthrough Energy</li>
+                    <li><strong>Recent news:</strong> Amazon/Whole Foods partnership for commercial deployment (2027)</li>
+                    <li><strong>Total raised:</strong> ~$100-110M through Series C</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Financial Analysis -->
+        <section id="financial" class="card">
+            <h2>Financial Analysis</h2>
+
+            <h3>4-Year Cash Comparison</h3>
+            <p class="section-intro">How does Mill's salary compare to staying at BCG over 4 years?</p>
+
+            <div class="comparison-container">
+                <div class="comparison-column bcg">
+                    <h4>BCG Path</h4>
+                    <div class="year-breakdown">
+                        <div class="year-item">
+                            <span>Year 1 (mixed)</span>
+                            <span>$178,400</span>
+                        </div>
+                        <div class="year-item">
+                            <span>Year 2 (Consultant)</span>
+                            <span>$257,400</span>
+                        </div>
+                        <div class="year-item">
+                            <span>Year 3 (Project Leader)</span>
+                            <span>$378,125</span>
+                        </div>
+                        <div class="year-item">
+                            <span>Year 4 (Project Leader)</span>
+                            <span>$378,125</span>
+                        </div>
+                        <div class="year-total">
+                            <span>4-Year Total</span>
+                            <span>$1,192,050</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="comparison-column mill">
+                    <h4>Mill Path (Middle Option)</h4>
+                    <div class="year-breakdown">
+                        <div class="year-item">
+                            <span>Year 1</span>
+                            <span>$157,500</span>
+                        </div>
+                        <div class="year-item">
+                            <span>Year 2</span>
+                            <span>$157,500</span>
+                        </div>
+                        <div class="year-item">
+                            <span>Year 3</span>
+                            <span>$157,500</span>
+                        </div>
+                        <div class="year-item">
+                            <span>Year 4</span>
+                            <span>$157,500</span>
+                        </div>
+                        <div class="year-total">
+                            <span>4-Year Total</span>
+                            <span>$630,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cash-gap">
+                <span class="gap-label">Cash Gap (BCG ahead):</span>
+                <span class="gap-value">$562,050</span>
+            </div>
+            <p class="gap-note">This is the guaranteed cash you're giving up by leaving BCG. The equity needs to make up this difference.</p>
+        </section>
+
+        <!-- Exit Scenarios -->
+        <section id="exits" class="card">
+            <h2>Equity Value at Exit</h2>
+            <p class="section-intro">What is the equity worth at different company valuations? (Middle option: 133,818 shares, assuming 20% dilution from future fundraising)</p>
+
+            <div class="chart-container">
+                <canvas id="exitChart"></canvas>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Exit Valuation</th>
+                            <th>Multiple from Today</th>
+                            <th>Net Equity Value</th>
+                            <th>Price per Share</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>$370M (flat)</td>
+                            <td>1.0x</td>
+                            <td>$69,227</td>
+                            <td>$0.93</td>
+                        </tr>
+                        <tr>
+                            <td>$500M</td>
+                            <td>1.4x</td>
+                            <td>$104,105</td>
+                            <td>$1.25</td>
+                        </tr>
+                        <tr>
+                            <td>$750M</td>
+                            <td>2.0x</td>
+                            <td>$171,177</td>
+                            <td>$1.88</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td><strong>$1B</strong></td>
+                            <td><strong>2.7x</strong></td>
+                            <td><strong>$238,249</strong></td>
+                            <td><strong>$2.50</strong></td>
+                        </tr>
+                        <tr>
+                            <td>$1.5B</td>
+                            <td>4.1x</td>
+                            <td>$372,393</td>
+                            <td>$3.75</td>
+                        </tr>
+                        <tr>
+                            <td>$2B</td>
+                            <td>5.4x</td>
+                            <td>$506,536</td>
+                            <td>$5.00</td>
+                        </tr>
+                        <tr>
+                            <td>$3B</td>
+                            <td>8.1x</td>
+                            <td>$774,824</td>
+                            <td>$7.50</td>
+                        </tr>
+                        <tr>
+                            <td>$5B</td>
+                            <td>13.5x</td>
+                            <td>$1,311,399</td>
+                            <td>$12.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="table-note">Net value = (shares × exit price per share) - (shares × $0.28 strike price), adjusted for 20% dilution</p>
+        </section>
+
+        <!-- Breakeven Analysis -->
+        <section id="breakeven" class="card">
+            <h2>Breakeven Analysis</h2>
+            <p class="section-intro">At what exit valuation does Mill = BCG financially?</p>
+
+            <div class="breakeven-box">
+                <div class="breakeven-headline">
+                    <span class="number">~$2.1B - $2.7B</span>
+                    <span class="context">(5.7x - 7.4x from today's valuation)</span>
+                </div>
+                <p>For the equity to fully cover the cash gap, Mill needs to exit at roughly 6-7x its current valuation.</p>
+            </div>
+
+            <h3>Dilution Sensitivity</h3>
+            <p>Future funding rounds will dilute your ownership. Here's how much you need at different dilution levels:</p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dilution Level</th>
+                            <th>Required Exit</th>
+                            <th>Multiple Needed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>15%</td>
+                            <td>$2.08B</td>
+                            <td>5.6x</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td><strong>20% (base case)</strong></td>
+                            <td><strong>$2.25B</strong></td>
+                            <td><strong>6.1x</strong></td>
+                        </tr>
+                        <tr>
+                            <td>25%</td>
+                            <td>$2.49B</td>
+                            <td>6.7x</td>
+                        </tr>
+                        <tr>
+                            <td>35%</td>
+                            <td>$3.18B</td>
+                            <td>8.6x</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Beyond the Numbers -->
+        <section id="qualitative" class="card">
+            <h2>Beyond the Numbers</h2>
+            <p class="section-intro">Financial analysis tells part of the story. Here's what it doesn't capture:</p>
+
+            <div class="factors-grid">
+                <div class="factor pro">
+                    <h4>Co-Founder Mentorship</h4>
+                    <p>Reporting directly to Matt Rogers (Nest co-founder, sold to Google for $3.2B). This is an MBA-level education in company building from someone who's done it at the highest level.</p>
+                </div>
+                <div class="factor pro">
+                    <h4>Leadership at 23</h4>
+                    <p>Leading AI and GTM at a Series C company. Most people don't get this scope until their 30s. The experience compounds over a career.</p>
+                </div>
+                <div class="factor pro">
+                    <h4>"Built This Company" Credential</h4>
+                    <p>If Mill succeeds, being early leadership team is career-defining. If starting a company later, this is the best possible preparation.</p>
+                </div>
+                <div class="factor pro">
+                    <h4>Mission Alignment</h4>
+                    <p>Gavin has already built an entire AI workflow system for Mill on his own time. This isn't just a job - it's genuine passion for the mission.</p>
+                </div>
+                <div class="factor con">
+                    <h4>BCG Brand Value</h4>
+                    <p>"BCG Consultant" is a universally recognized credential that opens doors. Leaving early means not fully capturing this optionality.</p>
+                </div>
+                <div class="factor con">
+                    <h4>Startup Risk</h4>
+                    <p>~90% of startups fail. Even well-funded ones with great founders. The equity could be worth zero.</p>
+                </div>
+            </div>
+
+            <div class="profile-context">
+                <h3>Why This Fits Gavin's Profile</h3>
+                <ul>
+                    <li><strong>Entrepreneurial track record:</strong> Co-founded Gryphon Ventures at 19, raised $1.05M from 21 LPs, invested in 5 startups. He understands startup risk/reward.</li>
+                    <li><strong>5-year goal:</strong> Building or investing in startups. Mill is directly on this path; BCG is a detour.</li>
+                    <li><strong>Risk tolerance:</strong> As a fund manager who wrote checks into early-stage companies, he's comfortable with illiquid, high-risk assets.</li>
+                    <li><strong>Already committed:</strong> Built AI tools for Mill before even accepting the offer. This level of conviction is rare.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Caveats -->
+        <section id="caveats" class="card caveats-section">
+            <h2>Important Caveats</h2>
+            <p class="section-intro">This analysis makes simplifying assumptions. Here's what it excludes:</p>
+
+            <div class="caveat-list">
+                <div class="caveat">
+                    <h4>What's NOT included - Mill Side</h4>
+                    <ul>
+                        <li>Future equity refreshes (common at startups as you take on more responsibility)</li>
+                        <li>Potential performance bonuses or GTM commission structure</li>
+                        <li>Salary increases over time</li>
+                        <li>Potential acceleration if Mill is acquired</li>
+                    </ul>
+                </div>
+                <div class="caveat">
+                    <h4>What's NOT included - BCG Side</h4>
+                    <ul>
+                        <li>Promotions beyond Project Leader (Principal, Partner track)</li>
+                        <li>MBA sponsorship value (~$200K+)</li>
+                        <li>Exit opportunities (PE, Corp Strategy at $300K+ roles)</li>
+                        <li>Superior benefits (100% health premiums, 5% profit sharing)</li>
+                    </ul>
+                </div>
+                <div class="caveat">
+                    <h4>Key Assumptions</h4>
+                    <ul>
+                        <li>20% dilution in future rounds (could be more or less)</li>
+                        <li>Full 4-year vesting (leaving early means less equity)</li>
+                        <li>BCG progression: Consultant Year 2, PL Years 3-4</li>
+                        <li>No taxes modeled (actual take-home will be lower)</li>
+                        <li>Equity is illiquid until exit event (IPO or acquisition)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendation -->
+        <section id="recommendation" class="card recommendation-section">
+            <h2>Recommendation</h2>
+
+            <div class="recommendation-box">
+                <div class="verdict">Accept the Mill Offer</div>
+                <div class="option">Middle Option: $157,500 + 133,818 shares</div>
+            </div>
+
+            <div class="rationale">
+                <h3>Why?</h3>
+                <ol>
+                    <li><strong>Role is exceptional:</strong> Co-founder direct report with AI + GTM leadership. This goes to 5-8 year experienced candidates, not 23-year-olds.</li>
+                    <li><strong>Career alignment:</strong> Gavin's 5-year goal is startups. This is the most direct path.</li>
+                    <li><strong>Founders are proven:</strong> Nest team built and sold a company for $3.2B. They know how to do this.</li>
+                    <li><strong>Timing is right:</strong> Series C with Amazon partnership. This is the growth inflection point.</li>
+                    <li><strong>Conviction is genuine:</strong> He's already building for Mill. You can't fake that kind of passion.</li>
+                </ol>
+            </div>
+
+            <div class="final-note">
+                <p><strong>The math requires ~6x exit to break even with BCG.</strong> That's aggressive but achievable for a well-positioned company with Nest-pedigree founders.</p>
+                <p>But honestly? If this were purely about maximizing expected value, you'd stay at BCG. The case for Mill is about building something meaningful, learning from world-class founders, and positioning for a career in startups.</p>
+                <p>Some things can't be put in a spreadsheet.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Analysis prepared March 2025 | Data sourced from offer documents and public filings</p>
+        </div>
+    </footer>
+
+    <script src="analysis.js"></script>
+</body>
+</html>
