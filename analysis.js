@@ -47,7 +47,7 @@ function createExitChart() {
     });
 
     // BCG cash gap line (constant)
-    const cashGap = 301723;
+    const cashGap = 521288;
     const cashGapLine = exitValuations.map(() => cashGap);
 
     new Chart(ctx, {
