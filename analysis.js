@@ -23,6 +23,17 @@ function calculateEquityValue(shares, exitValuation, dilution = 0.20) {
     };
 }
 
+// Graduated dilution model: higher exits = more rounds = more dilution
+function getGraduatedDilution(exitValuation) {
+    if (exitValuation <= 370e6) return 0.15;      // Flat/down - minimal new rounds
+    if (exitValuation <= 500e6) return 0.20;      // Quick M&A
+    if (exitValuation <= 1e9) return 0.25;        // M&A or small IPO
+    if (exitValuation <= 1.5e9) return 0.30;      // Medium exit
+    if (exitValuation <= 2e9) return 0.35;        // Series D + IPO
+    if (exitValuation <= 3e9) return 0.40;        // Series D, E + IPO
+    return 0.45;                                   // Large IPO, multiple rounds
+}
+
 // Format currency
 function formatMoney(amount) {
     if (amount >= 1000000000) {
@@ -41,8 +52,11 @@ function createExitChart() {
 
     const exitValuations = [370e6, 500e6, 750e6, 1e9, 1.5e9, 2e9, 3e9, 5e9];
     const labels = exitValuations.map(v => formatMoney(v));
+
+    // Use graduated dilution model
     const equityValues = exitValuations.map(v => {
-        const eq = calculateEquityValue(MIDDLE_OPTION_SHARES, v, DILUTION);
+        const dilution = getGraduatedDilution(v);
+        const eq = calculateEquityValue(MIDDLE_OPTION_SHARES, v, dilution);
         return eq.netValue;
     });
 

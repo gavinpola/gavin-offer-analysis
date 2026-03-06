@@ -277,6 +277,29 @@ tr:hover {
     font-size: 0.95rem;
 }
 
+/* Dilution Note */
+.dilution-note {
+    background: #f0f9ff;
+    border: 1px solid #90cdf4;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.dilution-note ul {
+    margin: 8px 0 0 20px;
+    padding: 0;
+}
+
+.dilution-note li {
+    margin-bottom: 4px;
+}
+
+.dilution-note a {
+    color: var(--primary-light);
+}
+
 /* Chart */
 .chart-container {
     max-width: 100%;

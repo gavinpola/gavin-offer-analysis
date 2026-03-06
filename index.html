@@ -167,7 +167,16 @@
         <!-- Exit Scenarios -->
         <section id="exits" class="card">
             <h2>Equity Value at Exit</h2>
-            <p class="section-intro">What is the equity worth at different company valuations? (Middle option: 133,818 shares, assuming 20% dilution from future fundraising)</p>
+            <p class="section-intro">What is the equity worth at different company valuations? (Middle option: 133,818 shares)</p>
+
+            <div class="dilution-note">
+                <strong>Graduated Dilution Model:</strong> Higher exits typically require more funding rounds, meaning more dilution. Based on <a href="https://carta.com/data/dilution-q1-2024/" target="_blank">Carta 2024 data</a> and <a href="https://www.indexventures.com/rewarding-talent/the-impact-of-dilution" target="_blank">Index Ventures research</a>, we model:
+                <ul>
+                    <li>Quick M&A ($500M-$1B): ~20-25% dilution (0-1 more rounds)</li>
+                    <li>Medium exit ($1.5-2B): ~30-35% dilution (1-2 more rounds)</li>
+                    <li>Large IPO ($3B+): ~40-45% dilution (2-3 more rounds)</li>
+                </ul>
+            </div>
 
             <div class="chart-container">
                 <canvas id="exitChart"></canvas>
@@ -178,64 +187,70 @@
                     <thead>
                         <tr>
                             <th>Exit Valuation</th>
-                            <th>Multiple from Today</th>
+                            <th>Multiple</th>
+                            <th>Est. Dilution</th>
                             <th>Net Equity Value</th>
-                            <th>Price per Share</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>$370M (flat)</td>
                             <td>1.0x</td>
-                            <td>$69,227</td>
-                            <td>$0.93</td>
+                            <td>15%</td>
+                            <td>$73,398</td>
                         </tr>
                         <tr>
                             <td>$500M</td>
                             <td>1.4x</td>
-                            <td>$104,105</td>
-                            <td>$1.25</td>
+                            <td>20%</td>
+                            <td>$103,882</td>
                         </tr>
                         <tr>
                             <td>$750M</td>
                             <td>2.0x</td>
-                            <td>$171,177</td>
-                            <td>$1.88</td>
+                            <td>25%</td>
+                            <td>$160,100</td>
                         </tr>
-                        <tr class="highlight-row">
-                            <td><strong>$1B</strong></td>
-                            <td><strong>2.7x</strong></td>
-                            <td><strong>$238,249</strong></td>
-                            <td><strong>$2.50</strong></td>
+                        <tr>
+                            <td>$1B</td>
+                            <td>2.7x</td>
+                            <td>25%</td>
+                            <td>$222,887</td>
                         </tr>
                         <tr>
                             <td>$1.5B</td>
                             <td>4.1x</td>
-                            <td>$372,393</td>
-                            <td>$3.75</td>
+                            <td>30%</td>
+                            <td>$325,229</td>
                         </tr>
                         <tr>
                             <td>$2B</td>
                             <td>5.4x</td>
-                            <td>$506,536</td>
-                            <td>$5.00</td>
+                            <td>35%</td>
+                            <td>$410,714</td>
+                        </tr>
+                        <tr class="highlight-row">
+                            <td><strong>$2.7B (breakeven)</strong></td>
+                            <td><strong>7.3x</strong></td>
+                            <td><strong>38%</strong></td>
+                            <td><strong>$521,288</strong></td>
                         </tr>
                         <tr>
                             <td>$3B</td>
                             <td>8.1x</td>
-                            <td>$774,824</td>
-                            <td>$7.50</td>
+                            <td>40%</td>
+                            <td>$579,861</td>
                         </tr>
                         <tr>
                             <td>$5B</td>
                             <td>13.5x</td>
-                            <td>$1,311,399</td>
-                            <td>$12.50</td>
+                            <td>45%</td>
+                            <td>$899,665</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p class="table-note">Net value = (shares × exit price per share) - (shares × $0.28 strike price), adjusted for 20% dilution</p>
+            <p class="table-note">Net value = effective shares × (exit price - $0.28 strike). Dilution increases with exit size because larger exits typically require more funding rounds.</p>
         </section>
 
         <!-- Breakeven Analysis -->
@@ -245,48 +260,54 @@
 
             <div class="breakeven-box">
                 <div class="breakeven-headline">
-                    <span class="number">~$1.9B - $2.5B</span>
-                    <span class="context">(5.2x - 6.8x from today's valuation)</span>
+                    <span class="number">~$2.7B</span>
+                    <span class="context">(7.3x from today's valuation)</span>
                 </div>
-                <p>For the equity to fully cover the cash gap, Mill needs to exit at roughly 5-7x its current valuation.</p>
+                <p>With graduated dilution factored in (larger exits = more funding rounds = more dilution), Mill needs to reach ~$2.7B for equity to cover the $521K cash gap.</p>
             </div>
 
-            <h3>Dilution Sensitivity</h3>
-            <p>Future funding rounds will dilute your ownership. Here's how much you need at different dilution levels:</p>
+            <h3>Why Higher Exits Mean More Dilution</h3>
+            <p>Based on <a href="https://www.saastr.com/carta-the-actual-real-dilution-from-series-a-b-c-and-d-rounds/" target="_blank">Carta data</a>: companies that exit bigger typically go through more funding rounds first.</p>
 
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>Dilution Level</th>
-                            <th>Required Exit</th>
-                            <th>Multiple Needed</th>
+                            <th>Exit Path</th>
+                            <th>Likely Rounds</th>
+                            <th>Est. Dilution</th>
+                            <th>Example</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>15%</td>
-                            <td>$1.94B</td>
-                            <td>5.2x</td>
+                            <td>Quick M&A</td>
+                            <td>0-1 more</td>
+                            <td>15-25%</td>
+                            <td>Acquired at $500M-$1B</td>
+                        </tr>
+                        <tr>
+                            <td>Medium IPO</td>
+                            <td>1-2 more (Series D)</td>
+                            <td>30-35%</td>
+                            <td>IPO at $1.5-2B</td>
                         </tr>
                         <tr class="highlight-row">
-                            <td><strong>20% (base case)</strong></td>
-                            <td><strong>$2.06B</strong></td>
-                            <td><strong>5.6x</strong></td>
+                            <td><strong>Large IPO</strong></td>
+                            <td><strong>2-3 more (D, E)</strong></td>
+                            <td><strong>38-45%</strong></td>
+                            <td><strong>IPO at $2.7B+ (breakeven)</strong></td>
                         </tr>
                         <tr>
-                            <td>25%</td>
-                            <td>$2.19B</td>
-                            <td>5.9x</td>
-                        </tr>
-                        <tr>
-                            <td>35%</td>
-                            <td>$2.51B</td>
-                            <td>6.8x</td>
+                            <td>Massive IPO</td>
+                            <td>3+ more</td>
+                            <td>45-50%</td>
+                            <td>IPO at $5B+</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            <p class="table-note">Key insight: Even with higher dilution, dollar value still grows with exit size. A $3B exit at 40% dilution ($580K) beats a $1B exit at 25% dilution ($223K).</p>
         </section>
 
         <!-- Beyond the Numbers -->
@@ -390,7 +411,7 @@
             </div>
 
             <div class="final-note">
-                <p><strong>The math requires ~5-6x exit to break even with BCG.</strong> That's ambitious but achievable for a well-positioned Series C company with Nest-pedigree founders and an Amazon partnership.</p>
+                <p><strong>The math requires ~7x exit (~$2.7B) to break even with BCG</strong> when accounting for graduated dilution. That's ambitious but achievable for a well-positioned Series C company with Nest-pedigree founders and an Amazon partnership.</p>
                 <p>But honestly? The case for Mill isn't just about expected value. It's about building something meaningful, learning from world-class founders, and positioning for a career in startups.</p>
                 <p>Some things can't be put in a spreadsheet.</p>
             </div>
